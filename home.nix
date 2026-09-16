@@ -102,16 +102,15 @@
     enableCompletion = true;
     autosuggestion.enable = true;
 
+    shellAliases = {
+      z = "zoxide";
+      update = "home-manager switch";
+    };
 
     initContent = ''
       eval "$(zoxide init zsh)"
       eval "$(starship init zsh)"
     '';
-
-    shellAliases = {
-      z = "zoxide";
-      update = "home-manager switch";
-    };
   };
 
   programs.git = {
