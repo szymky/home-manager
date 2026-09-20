@@ -25,6 +25,8 @@
     bc
     lsd
 
+    gnupg
+
     kdePackages.kdeconnect-kde
 
     brave
@@ -80,14 +82,12 @@
     enable = true;
     enableZshIntegration = true;
     settings = {
-      background-opacity = 0.97
-      ;
+      background-opacity = 0.97;
       background-blur-radius = 32;
       font-size = 13;
       window-decoration = true;
       cursor-color = "#f5e0dc";
       cursor-text = "#1e1e2e";
-      cursor-style-blink = true;
 
       theme = "Catppuccin Mocha";
     };
@@ -108,6 +108,9 @@
     };
 
     initContent = ''
+
+      eval "$(ssh-agent -s)"
+
       eval "$(zoxide init zsh)"
       eval "$(starship init zsh)"
     '';
