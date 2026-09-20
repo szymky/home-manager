@@ -105,6 +105,7 @@
     shellAliases = {
       z = "zoxide";
       update = "home-manager switch";
+      zed = "zeditor";
     };
 
     initContent = ''
