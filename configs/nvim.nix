@@ -52,7 +52,7 @@
 
       treesitter = {
         enable = true;
-        folding.enable = true;
+        folding.enable = false;
 
         highlight.enable = true;
         indent.enable = true;
