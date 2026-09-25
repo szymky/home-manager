@@ -15,7 +15,7 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      update = "home-manager switch";
+      update = "git -C ~/.config/home-manager pull && home-manager switch";
       zed = "zeditor";
     };
 
