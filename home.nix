@@ -25,6 +25,8 @@
     bc
     lsd
 
+    btop
+
     gnupg
 
     kdePackages.kdeconnect-kde
@@ -117,16 +119,10 @@
     '';
   };
 
-  programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        name = "szymky";
-        email = "mikaroebers@proton.me";
-      };
-      init.defaultBranch = "main";
-    };
-  };
+  imports = [
+    ./configs/git.nix
+  ];
+
 
   programs.yazi = {
     enable = true;
