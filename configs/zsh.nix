@@ -19,8 +19,7 @@
 
     initContent = ''
 
-      eval "$(ssh-agent -s)"
-      eval "$(starship init zsh)"
+      eval "$(ssh-agent -s > /dev/null)"
     '';
   };
 }
