@@ -61,80 +61,11 @@
   xdg.enable = true;
   xdg.systemDirs.data = [ "${config.xdg.dataHome}/nix-desktop-files" ];
 
-  programs.starship = {
-    enable = true;
-
-    settings = {
-      add_newline = false;
-
-      format = "$directory$git_branch$git_status$character";
-
-      character = {
-        success_symbol = "->";
-        error_symbol = "x>";
-      };
-
-      directory = {
-        truncation_length = 3;
-      };
-    };
-  };
-
-  programs.ghostty = {
-    enable = true;
-    enableZshIntegration = true;
-    settings = {
-      background-opacity = 0.97;
-      background-blur-radius = 32;
-      font-size = 13;
-      window-decoration = true;
-      cursor-color = "#f5e0dc";
-      cursor-text = "#1e1e2e";
-
-      theme = "Catppuccin Mocha";
-    };
-  };
-
-  programs.neovim = {
-    enable = true;
-  };
-
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-
-    shellAliases = {
-      z = "zoxide";
-      update = "home-manager switch";
-      zed = "zeditor";
-    };
-
-    initContent = ''
-
-      eval "$(ssh-agent -s)"
-
-      eval "$(zoxide init zsh)"
-      eval "$(starship init zsh)"
-    '';
-  };
 
   imports = [
-    ./configs/git.nix
+    ./configs/configs.nix
   ];
 
-
-  programs.yazi = {
-    enable = true;
-    enableZshIntegration = true;
-    settings = {
-      mgr = {
-        show_hidden = true;
-        show_symlink = true;
-      };
-    };
-
-  };
 
 
 
