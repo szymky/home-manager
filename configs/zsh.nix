@@ -12,14 +12,18 @@
     enableCompletion = true;
     autosuggestion.enable = true;
 
+    syntaxHighlighting.enable = true;
+
     shellAliases = {
       update = "home-manager switch";
       zed = "zeditor";
     };
 
     initContent = ''
-
-      eval "$(ssh-agent -s)" > /dev/null
+      if [ -z "$SSH_AUTH_SOCK" ]; then
+        eval "$(ssh-agent -s)" > /dev/null
+      fi
+      ssh-add -q ~/.ssh/id_* 2>/dev/null || true
     '';
   };
 }
