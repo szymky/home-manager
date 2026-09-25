@@ -9,7 +9,6 @@
 
   home.stateVersion = "26.05";
   home.packages = with pkgs; [
-
     curl
     wget
     ripgrep
@@ -24,33 +23,26 @@
     fastfetch
     bc
     lsd
-
     btop
-
     gnupg
-
-    kdePackages.kdeconnect-kde
-
     brave
     firefox
-
     zed-editor
-
     qbittorrent
-
     rustdesk
     fontconfig
     spotify
     obsidian
-
     nil
     nixd
-
     xdg-utils
   ];
 
   home.activation.linkDesktopApplications = {
-    after = [ "writeBoundary" "createXdgUserDirectories" ];
+    after = [
+      "writeBoundary"
+      "createXdgUserDirectories"
+    ];
     before = [ ];
     data = ''
       rm -rf ${config.xdg.dataHome}/nix-desktop-files/applications
@@ -61,13 +53,9 @@
   xdg.enable = true;
   xdg.systemDirs.data = [ "${config.xdg.dataHome}/nix-desktop-files" ];
 
-
   imports = [
     ./configs/configs.nix
   ];
-
-
-
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
