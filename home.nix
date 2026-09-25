@@ -89,7 +89,7 @@
   #  /etc/profiles/per-user/mika/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    EDITOR = "vim";
+    EDITOR = "nvim";
   };
 
   programs.home-manager.enable = true;
