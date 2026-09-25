@@ -15,7 +15,6 @@
     fd
     fzf
     jq
-    zoxide
     bat
     unzip
     tree
