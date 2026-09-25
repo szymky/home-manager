@@ -19,7 +19,7 @@
 
     initContent = ''
 
-      eval "$(ssh-agent -s > /dev/null)"
+      eval "$(ssh-agent -s)" > /dev/null
     '';
   };
 }
