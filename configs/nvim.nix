@@ -116,6 +116,37 @@
             installCargo = false;
             installRustc = false;
           };
+          texlab = {
+            enable = true;
+            settings = {
+              texlab = {
+
+                build = {
+
+                  executable = "latexmk";
+                  args = [
+                    "-pdf"
+                    "-interaction=nonstopmode"
+                    "-synctex=1"
+                    "%f"
+                  ];
+                  onSave = true;
+                  forwardSearchAfter = true;
+                };
+                forwardSearch = {
+
+                  executable = "zathura";
+                  args = [
+                    "--synctex-forward"
+                    "%l:1:%f"
+                    "%p"
+                  ];
+                };
+
+              };
+            };
+          };
+          marksman.enable = true;
         };
 
       };
@@ -134,6 +165,8 @@
             ];
             rust = [ "rustfmt" ];
             lua = [ "stylua" ];
+            tex = [ "latexindent" ];
+            markdown = [ "prettier" ];
           };
         };
       };
