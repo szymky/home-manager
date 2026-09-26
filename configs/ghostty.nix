@@ -5,7 +5,7 @@
     enable = true;
     enableZshIntegration = true;
     settings = {
-      background-opacity = 0.97;
+      background-opacity = 1;
       background-blur-radius = 32;
       font-size = 13;
       window-decoration = true;
