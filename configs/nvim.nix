@@ -14,6 +14,9 @@
       wrap = false;
       termguicolors = true;
       scrolloff = 8;
+      cursorline = true;
+      updatetime = 300;
+      signcolumn = "yes";
     };
 
     colorschemes.catppuccin = {
@@ -29,26 +32,33 @@
       {
         mode = "n";
         key = "<leader>ff";
-          action = "<cmd>Telescope find_files<CR>";
-          options.desc = "Find Files";
-        }
-        {
-          mode = "n";
-          key = "<leader>fg";
-          action = "<cmd>Telescope live_grep<CR>";
-          options.desc = "Live Grep";
-        }
-        {
-          mode = "n";
-          key = "<leader>e";
-          action = "<cmd>Neotree toggle<CR>";
-          options.desc = "Toggle File Explorer";
-        }
-      ];
+        action = "<cmd>Telescope find_files<CR>";
+        options.desc = "Find Files";
+      }
+      {
+        mode = "n";
+        key = "<leader>fg";
+        action = "<cmd>Telescope live_grep<CR>";
+        options.desc = "Live Grep";
+      }
+      {
+        mode = "n";
+        key = "<leader>e";
+        action = "<cmd>Neotree toggle<CR>";
+        options.desc = "Toggle File Explorer";
+      }
+    ];
 
     plugins = {
       lualine.enable = true;
       telescope.enable = true;
+      web-devicons.enable = true;
+
+      gitsigns.enable = true;
+      fidget.enable = true;
+      which-key.enable = true;
+      bufferline.enable = true;
+      trouble.enable = true;
 
       treesitter = {
         enable = true;
@@ -76,6 +86,8 @@
             "<S-Tab>" = "cmp.mapping.select_prev_item()";
             "<C-Space>" = "cmp.mapping.complete()";
           };
+
+          experimental.ghost_text = true;
         };
       };
 
@@ -89,9 +101,11 @@
             gd = "definition";
             gD = "declaration";
             gi = "implementation";
+            gr = "references";
             K = "hover";
             "<leader>rn" = "rename";
             "<leader>ca" = "code_action";
+            "<leader>D" = "type_definition";
           };
         };
         servers = {
@@ -114,7 +128,10 @@
             lsp_fallback = true;
           };
           formatters_by_ft = {
-            nix = [ "aleph" "nixpkgs_fmt" ];
+            nix = [
+              "aleph"
+              "nixpkgs_fmt"
+            ];
             rust = [ "rustfmt" ];
             lua = [ "stylua" ];
           };
