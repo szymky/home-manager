@@ -17,6 +17,7 @@
     shellAliases = {
       update = "git -C ~/.config/home-manager pull && home-manager switch";
       zed = "zeditor";
+      cat = "bat --plain";
     };
 
     initContent = ''
