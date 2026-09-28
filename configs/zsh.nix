@@ -18,6 +18,11 @@
       update = "git -C ~/.config/home-manager pull && home-manager switch";
       zed = "zeditor";
       cat = "bat --plain";
+      ls = "lsd";
+      l = "lsd -l";
+      la = "lsd -a";
+      lla = "lsd -la";
+      lt = "lsd --tree";
     };
 
     initContent = ''
