@@ -15,6 +15,7 @@
     fd
     fzf
     jq
+    less
     bat
     unzip
     tree
