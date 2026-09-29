@@ -36,6 +36,8 @@
     nil
     nixd
     xdg-utils
+
+    halloy
   ];
 
   home.activation.linkDesktopApplications = {
