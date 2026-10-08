@@ -11,5 +11,4 @@
     ./starship.nix
   ];
 
-
 }

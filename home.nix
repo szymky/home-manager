@@ -38,6 +38,9 @@
     xdg-utils
 
     halloy
+    opencode
+
+    lazygit
   ];
 
   home.activation.linkDesktopApplications = {
