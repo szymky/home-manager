@@ -43,6 +43,8 @@
     lazygit
 
     sqlitebrowser
+
+    zathura
   ];
 
   home.activation.linkDesktopApplications = {
