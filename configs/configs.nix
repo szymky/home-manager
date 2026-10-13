@@ -9,6 +9,7 @@
     ./nvim.nix
     ./ghostty.nix
     ./starship.nix
+    ./helix.nix
   ];
 
 }

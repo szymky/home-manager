@@ -41,6 +41,8 @@
     opencode
 
     lazygit
+
+    sqlitebrowser
   ];
 
   home.activation.linkDesktopApplications = {
