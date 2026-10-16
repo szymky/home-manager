@@ -26,24 +26,15 @@
     btop
     gnupg
     brave
-    firefox
-    zed-editor
     qbittorrent
-    rustdesk
     fontconfig
-    spotify
     obsidian
     nil
     nixd
     xdg-utils
-
     halloy
     opencode
-
     lazygit
-
-    sqlitebrowser
-
     zathura
   ];
 
