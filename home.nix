@@ -37,6 +37,7 @@
     lazygit
     zathura
     lunar-client
+    modrinth-app
   ];
 
   home.activation.linkDesktopApplications = {
