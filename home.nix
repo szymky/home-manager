@@ -36,6 +36,7 @@
     opencode
     lazygit
     zathura
+    lunar-client
   ];
 
   home.activation.linkDesktopApplications = {
