@@ -62,6 +62,7 @@
 
   home.sessionVariables = {
     EDITOR = "hx";
+    SSL_CERT_FILE = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
   };
 
   programs.home-manager.enable = true;
